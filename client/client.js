@@ -341,7 +341,7 @@ Client.prototype = {
             if(err)
               console.log('error:', err);
 
-            if (r.statusCode === 401 && response.challenge) {
+            if (r.statusCode === 401 && response && response.challenge) {
               var responseHeaders = r.headers;
               response.challengeNodeId = responseHeaders.challengenodeid;
               response.challengeSessionId = responseHeaders.challengesessionid;
